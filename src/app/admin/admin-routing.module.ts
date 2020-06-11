@@ -21,11 +21,12 @@ const routes: Routes = [
       },
       {
         path: 'product',
-        loadChildren: './admin/product/product.module#ProductModule',
+        loadChildren: () => import('./product/product.module').then(m=>m.ProductModule)
       },
       {
         path:'user',
-        loadChildren:'./admin/user/user.module#UserModule'
+        loadChildren:() => import('./user/user.module').then(m => m.UserModule)
+      
       }
     ]
   }

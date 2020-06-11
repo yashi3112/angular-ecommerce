@@ -7,12 +7,11 @@ import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
-    path:"customer",
+    path:"",
     component:CustomerComponent,
     children:[
       {
-        path: '',
-        pathMatch: 'full',
+        path:"",
         component: HomeComponent
       },
       {
