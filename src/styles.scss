@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  width: 100%;
+  min-height: 100vh
+}
+
+.theme-switch.custom-switch {
+  min-height: 3.5rem;
+  .custom-control-label {
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+  }
+  .custom-control-label::before {
+    border-radius: 1.5rem;
+    width: 3.75rem;
+    height: 2rem;
+  }
+  .custom-control-label::after {
+    width: calc(2rem - 4px);
+    height: calc(2rem - 4px);
+    border-radius: 1.5rem;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1.75rem);
+  }
+}
