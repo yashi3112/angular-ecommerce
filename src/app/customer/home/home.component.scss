@@ -1,0 +1,21 @@
+  .brand-img-right{
+    background-image: url(/assets/5001.jpg);
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .brand-img-left{
+    background-image: url(/assets/4998.jpg);
+    // background-position: center left;
+    background-size: contain;
+    background-position-x: -15%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
