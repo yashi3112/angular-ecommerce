@@ -20,7 +20,7 @@
           <td>{{x.price}}</td>
           <td>{{x.sellStatus}}</td>
           <td>
-            <button class="btn btn-info" [routerLink]="['/detail',x.id]">Edit</button>
+            <button class="btn btn-info" [routerLink]="['detail',x.id]">Edit</button>
             <button class="btn btn-danger ml-2" (click)="deleteProduct(x.id)">Delete</button>
           </td>
         </tr>

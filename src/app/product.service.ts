@@ -30,4 +30,14 @@ export class ProductService {
     products.splice(index, 1);
     this.updateProductLocalStorage(products);
   }
+  getProductById(id) {
+    const products = this.getProduct();
+    return products.find((product) => product.id === id);
+  }
+  updateProduct(id, product) {
+    const products = this.getProduct();
+    const index = products.findIndex((product) => product.id === id);
+    products[index] = product;
+    this.updateProductLocalStorage(products);
+  }
 }

@@ -9,7 +9,8 @@ import { ProductService } from 'src/app/product.service';
 export class ListComponent implements OnInit {
 
   products: any[] = [];
-  id = 1;
+
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
