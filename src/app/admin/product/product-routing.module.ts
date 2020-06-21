@@ -6,13 +6,17 @@ import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {
-    path:"detail",
-    component:DetailComponent
+    path: "detail",
+    component: DetailComponent
   },
   {
-    path:"",
-    pathMatch:"full",
-    component:ListComponent
+    path: "detail/:id",
+    component: DetailComponent
+  },
+  {
+    path: "",
+    pathMatch: "full",
+    component: ListComponent
   }
 ];
 

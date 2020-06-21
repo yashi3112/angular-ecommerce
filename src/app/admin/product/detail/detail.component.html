@@ -2,22 +2,25 @@
   <div class="card-body">
     <h5 class="card-title">Add Products</h5>
     <button class="btn btn-primary add-button" routerLink="../">Go Back</button>
-    <form>
+    <form [formGroup]="addForm" (ngSubmit)="addDetail()">
       <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="name"
+          formControlName="name">
 
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Price</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Price" name="price"
+          formControlName="price">
       </div>
       <div class="custom-control custom-switch theme-switch">
-        <input type="checkbox" class="custom-control-input form-control-lg" id="customSwitch1">
+        <input type="checkbox" class="custom-control-input form-control-lg" id="customSwitch1" name="sellStatus"
+          formControlName="sellStatus">
         <label class="custom-control-label" for="customSwitch1">Available for sell</label>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
     </form>
   </div>
 </div>
