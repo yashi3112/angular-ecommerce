@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/user.service';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+  users: any[] = [];
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.users = this.userService.getUser();
+  }
+
+  deleteUser(id) {
+    this.userService.deleteUser(id);
+    this.ngOnInit();
+  }
+  editUser(id) {
+    let user = this.userService.getUserById(id);
+    this.userService.updateUserbyId(id, user);
+    this.ngOnInit();
   }
 
 }
